@@ -1,0 +1,17 @@
+; Typical process memory layout 
+;
+; Low addresses
+; +-----------------------------+
+; | Text / code                 | Executable instructions
+; | Read-only data              | Constants and string literals
+; | Initialized data            | Initialized globals and statics
+; | BSS                         | Zero-initialized globals/statics
+; | Heap                        | Dynamic allocations; usually grows upward
+; |                             |
+; | Unmapped / shared regions   | Mappings vary by OS and process
+; |                             |
+; | Stack                       | Calls and local variables; usually grows downward
+; +-----------------------------+
+; High addresses
+;
+; Actual placement varies by platform, executable format, and ASLR.
